@@ -1,0 +1,22 @@
+{
+  "name": "herokuapp",
+  "version": "1.0.0",
+  "description": "Score tracking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/sorenscores.git"
+  },
+  "keywords": [
+    "scores"
+  ],
+  "author": "willchis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.5.1"
+  }
+}
