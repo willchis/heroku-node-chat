@@ -2,15 +2,19 @@ $(() => {
 	const socket = io();
 	let historyLoaded = false;
 
+	const appendMessage = (message) => {
+		$('#messages').append($('<li class="list-group-item"></li>').text(message));
+	};
+
 	socket.on('history', (history) => {
 		if (!historyLoaded) {
 			history.forEach((historicalMessage) => {
-		  		$('#messages').append($('<li>').text(historicalMessage));
+		  		appendMessage(historicalMessage);
 		  		historyLoaded = true;
 		  	});
 	  	}
 	});
-	      
+
 	$('form').submit((e) => {
 		e.preventDefault();
 		socket.emit('chat message', $('#message-input').val());
@@ -19,6 +23,8 @@ $(() => {
 	});
 
 	socket.on('chat message', (msg) => {
-	  	$('#messages').append($('<li>').text(msg));
+		if(msg) {
+			appendMessage(msg);
+	  	}
 	});
 });

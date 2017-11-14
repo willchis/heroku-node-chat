@@ -1,27 +1,29 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: grey; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
+    <title>Chatter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/index.js"></script>
   </head>
   <body>
-    <h1>Node Chat</h1>
-    <ul id="messages"></ul>
+    <div class="container-fluid">
+      <h1>Chatter</h1>
+      <ul id="messages" class="list-group"></ul>
 
-    <form>
-      <input id="message-input" autocomplete="off" /><button>Send</button>
-    </form>
+      <form class="col-xs-12">
+        <div class="input-group">
+          <input type="text" id="message-input" class="form-control" autocomplete="off" />
+          <span class="input-group-btn">
+            <button class="btn">Send</button>
+          </span>
+         
+        </div>
+      </form>
+    </div>
   </body>
 </html>

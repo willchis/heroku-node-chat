@@ -27,15 +27,17 @@ io.on('connection', (socket) => {
     });
 
     socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
-        io.emit('chat message', msg);
-        
-        if (history.length > MAX_MESSAGE_HISTORY) {
-          history = []
-        }
+        if (msg) {
+            console.log('message: ' + msg);
+            io.emit('chat message', msg);
+            
+            if (history.length > MAX_MESSAGE_HISTORY) {
+              history = []
+            }
 
-        history.push(msg);
-        console.log(history.toString());
+            history.push(msg);
+            console.log(history.toString());
+        }
     });
 });
 
