@@ -1,0 +1,17 @@
+body {
+	height: 100vh;
+
+}
+
+body .container-fluid {
+	height: 100%;
+}
+
+.message-window {
+	height: 90%;
+}
+
+#messages {
+	height: 90%;
+	overflow-y: scroll;
+}
