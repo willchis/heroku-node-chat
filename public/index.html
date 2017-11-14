@@ -8,22 +8,25 @@
 
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
     <div class="container-fluid">
       <h1>Chatter</h1>
-      <ul id="messages" class="list-group"></ul>
+      <div class="message-window">
+        <ul id="messages" class="list-group"></ul>
 
-      <form class="col-xs-12">
-        <div class="input-group">
-          <input type="text" id="message-input" class="form-control" autocomplete="off" />
-          <span class="input-group-btn">
-            <button class="btn">Send</button>
-          </span>
-         
-        </div>
-      </form>
+        <form class="col-xs-12">
+          <div class="input-group">
+            <input type="text" id="message-input" class="form-control" autocomplete="off" />
+            <span class="input-group-btn">
+              <button class="btn">Send</button>
+            </span>
+           
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>

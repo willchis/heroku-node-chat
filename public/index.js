@@ -1,9 +1,13 @@
 $(() => {
 	const socket = io();
 	let historyLoaded = false;
+	$messageContainer = $('#messages');
 
 	const appendMessage = (message) => {
-		$('#messages').append($('<li class="list-group-item"></li>').text(message));
+		$messageContainer.append($('<li class="list-group-item"></li>').text(message));
+		$messageContainer.stop().animate({
+  			scrollTop: $messageContainer[0].scrollHeight
+		});
 	};
 
 	socket.on('history', (history) => {
