@@ -5,13 +5,16 @@ body {
 
 body .container-fluid {
 	height: 100%;
-}
-
-.message-window {
-	height: 90%;
+	display: flex;
+    flex-direction: column;
 }
 
 #messages {
-	height: 90%;
 	overflow-y: scroll;
+	border: 1.5px solid #d4adad;
+	border-radius: 4px;
+}
+
+form .input-group {
+	margin-bottom: 20px;
 }
