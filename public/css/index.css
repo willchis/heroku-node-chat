@@ -13,6 +13,7 @@ body .container-fluid {
 	overflow-y: scroll;
 	border: 1.5px solid #d4adad;
 	border-radius: 4px;
+	height: 100%;
 }
 
 form .input-group {
